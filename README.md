@@ -27,6 +27,7 @@ v8.1.0
     - [Running the tests](#running-the-tests)
     - [Building a distribution version](#building-a-distribution-version)
     - [Serving the distribution version](#serving-the-distribution-version)
+  - [Authors](#authors)
 
 
 ## Getting Started
