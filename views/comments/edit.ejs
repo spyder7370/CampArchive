@@ -1,0 +1,51 @@
+<%- include('../partials/header'); -%>
+<div class = "container">
+	<div class="row justify-content-center">
+		
+
+		<main class="form-signin">
+			<form action="/campgrounds/<%=campgroundId%>/comments/<%= comment._id %>?_method=PUT" method="POST">
+				<h1 class="h3 mb-3 fw-normal text-center">Edit comment by <%=comment.author.username%></h1>
+
+				<div class="form-floating">
+					<textarea class="form-control" name="comment[text]" id="commentedit" style="height: 100px" required><%= comment.text %></textarea>
+					<label for="commentedit">Comment Body</label>
+				</div>
+	
+				<button class="w-100 btn btn-lg btn-primary mt-3" type="submit">Edit Comment</button>
+			</form>
+			<div class="mt-3">
+				<a href ="/campgrounds/<%=campgroundId%>">Go back</a>
+			</div>	
+		</main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<!-- <h1 style="text-align: center;">Edit comment by <%=comment.author.username%></h1>
+		<div style="width: 30%; margin: 25px auto;">
+			<form action="/campgrounds/<%=campgroundId%>/comments/<%= comment._id %>?_method=PUT" method="POST">
+				<div class="input-group mb-3">
+					<textarea class="form-control" name="comment[text]" style="height: 150px"><%= comment.text %></textarea>
+				</div>
+				<div class="form-group">
+					<div class="d-grid gap-2">
+					  <button class="btn btn-primary" type="submit">Submit</button>
+					</div>
+				</div>
+			</form>
+			<br>
+			<p><a href ="/campgrounds">Go back</a></p>
+		</div> -->
+	</div>
+</div>
+<%- include('../partials/footer'); -%>

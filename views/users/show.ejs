@@ -1,0 +1,48 @@
+<%- include('../partials/header'); -%>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-4 col-md-4">
+            <h1 id="user-profile" class="text-center"><%= user.firstName + " " + user.lastName%>'s Profile</h1>
+            <hr>
+            <div class="card mt-4" style="width: 18rem; margin: auto;">
+                <img src="<%= user.avatar%>" class="card-img-top" alt="user profile image">
+                <div class="card-body">
+                    <h5 class="card-title"><i class="far fa-envelope"></i>  <a href="mailto:<%=user.email%>"><%=user.email%></a></h5>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem; margin: auto;">
+                <div class="card-body">
+                  <h5 class="card-title">About Me!</h5>
+                  <p class="card-text"><%- user.about %></p>
+                  <% if((currentUser && user._id.equals(currentUser._id)) || (currentUser && currentUser.isAdmin)){ %>
+                    <a class="btn btn-warning" href="/users/<%=user._id%>/edit">Edit</a>
+                  <% } %>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-8">
+            <h1 id="user-profile" class="text-center"><%= user.username %>'s Campgrounds</h1>
+            <hr>
+            <div class="card mt-4" style=" margin: auto;">
+                <div class="card-body">
+                    <% if(campgrounds.length < 1){ %>
+                        <p class="card-text fst-italic">User has not posted any campgrounds yet</p>
+                    <% } %>
+                    <% campgrounds.forEach(function(campground){ %>
+                        <div class="card">
+                            <div class="card-body">
+                                <a href="/campgrounds/<%= campground.id %>" class="btn btn-sm btn-primary float-end">Visit</a>
+                                <h5 class="card-title"><a href="/campgrounds/<%= campground.id %>" class="text-decoration-none"><%= campground.name %></a></h5>
+                                <p class="card-text">Located at: <%= campground.location %></p>
+                            </div>
+                        </div>
+                    <% }) %>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<%- include('../partials/footer'); -%>

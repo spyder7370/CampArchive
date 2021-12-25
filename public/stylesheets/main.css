@@ -1,0 +1,141 @@
+#delete-form{
+    display: inline;
+}
+#search-button{
+  display: inline;
+}
+html,
+body {
+  height: 100%;
+}
+
+#user-profile{
+  font-family: 'Open Sans', sans-serif;
+
+}
+
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
+}
+
+
+.form-signin .form-floating:focus-within {
+  z-index: 2;
+}
+
+.form-signin input[type="text"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="number"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.form-signin input[name="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.form-signin input[id="location"] {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.form-signin input[id="image"] {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.form-signin input[id="price"] {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.form-signin textarea[id="floatingTextarea3"] {
+  margin-bottom: -1px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.form-signin textarea[id="descedit"] {
+  margin-bottom: -1px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.form-signin input[id="useremail"] {
+  margin-bottom: -1px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.form-signin input[id="firstName"] {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.form-signin input[id="lastName"] {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.form-signin textarea[id="floatingTextarea2"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.form-signin textarea[name="campground[info3]"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.form-signin textarea[name="user[about]"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#map {
+  height: 400px;
+  width: 100%;
+  margin-top: 5%;
+}
+
+.marker {
+  background-image: url('/images/mapbox-icon.png');
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%; 
+  cursor: pointer;
+}
+
+.mapboxgl-popup {
+  max-width: 200px;
+}
+
+.mapboxgl-popup-content {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+}
